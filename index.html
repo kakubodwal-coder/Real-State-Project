@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EstatePulse | Modern Real Estate Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-flex">
+      <div class="logo">Estate<span>Pulse</span></div>
+      <nav>
+        <a href="#properties">Properties</a>
+        <a href="#emi-section">EMI Calculator</a>
+        <a href="#contact" class="btn-outline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Find Your Dream Home Across Top Cities</h1>
+      <p>Verified residential properties with transparent pricing and smart filters.</p>
+
+      <div class="filter-bar">
+        <select id="cityFilter">
+          <option value="all">All Cities</option>
+          <option value="Gurugram">Gurugram</option>
+          <option value="Noida">Noida</option>
+          <option value="Bengaluru">Bengaluru</option>
+        </select>
+
+        <select id="budgetFilter">
+          <option value="all">Any Budget</option>
+          <option value="100">Up to ₹1 Cr</option>
+          <option value="200">Up to ₹2 Cr</option>
+          <option value="500">Up to ₹5 Cr</option>
+        </select>
+
+        <button id="resetBtn" class="btn-secondary">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <main id="properties" class="container section">
+    <div class="section-header">
+      <h2>Featured Properties</h2>
+      <span id="propertyCount">Showing 0 properties</span>
+    </div>
+    <div id="propertyGrid" class="property-grid"></div>
+  </main>
+
+  <section id="emi-section" class="section bg-light">
+    <div class="container emi-box">
+      <div>
+        <h2>Home Loan EMI Calculator</h2>
+        <p>Estimate your monthly installment before booking a site visit.</p>
+
+        <div class="input-group">
+          <label for="loanAmount">Loan Amount (₹ Lakhs): <strong id="loanVal">75</strong> L</label>
+          <input type="range" id="loanAmount" min="10" max="500" step="5" value="75" />
+        </div>
+
+        <div class="input-group">
+          <label for="interestRate">Interest Rate (% p.a.): <strong id="rateVal">8.5</strong>%</label>
+          <input type="range" id="interestRate" min="6.5" max="14" step="0.1" value="8.5" />
+        </div>
+
+        <div class="input-group">
+          <label for="tenureYears">Tenure (Years): <strong id="tenureVal">20</strong> yrs</label>
+          <input type="range" id="tenureYears" min="5" max="30" step="1" value="20" />
+        </div>
+      </div>
+
+      <div class="emi-result-card">
+        <span>Estimated Monthly EMI</span>
+        <h3 id="emiOutput">₹65,069</h3>
+        <p>Principal + Interest calculated monthly</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-flex">
+      <p>EstatePulse Real Estate Showcase • Built by Priyanshu</p>
+      <p>For inquiries: kakubodwal@gmail.com</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
